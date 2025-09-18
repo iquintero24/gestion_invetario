@@ -1,0 +1,46 @@
+# Compilados
+bin/
+obj/
+out/
+Debug/
+Release/
+
+# Configuración de usuario de Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Archivos generados
+*.log
+*.tlog
+*.cache
+*.pdb
+
+# Paquetes de dependencias
+*.nupkg
+*.snupkg
+packages/
+
+# Archivos de publicación
+publish/
+*.Publish.xml
+
+# Archivos temporales
+*.tmp
+*.bak
+*.swp
+*.DS_Store
+Thumbs.db
+
+# Archivos de Rider/JetBrains
+.idea/
+*.iml
+
+# Archivos de VS Code
+.vscode/
+
+# Configuración de sistema operativo
+ehthumbs.db
+desktop.ini
