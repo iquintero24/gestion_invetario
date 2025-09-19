@@ -57,4 +57,13 @@ public class ventasService
         }
     }
 
+    //Desarrollar funcion para calcular el promedio de ventas diarias
+
+    public void calcularPromedioVentas(DateTime fechaRecibida)
+    {
+        // recibe la fecha en la que se va sacar el promedio
+        var resultado = ventas.Where(ventas => ventas.FechaVenta == fechaRecibida).ToList(); 
+        var promedio = resultado.Average();
+    }
+
 }
