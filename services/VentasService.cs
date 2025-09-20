@@ -117,5 +117,5 @@ public class ventasService
     }
 
     // Filtrar una lista de ventas para obtener todas las ventas realizadas después de una fecha específica.
-    public void 
+   
 }
