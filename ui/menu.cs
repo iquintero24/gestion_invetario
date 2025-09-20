@@ -16,8 +16,9 @@ public class Menu
             Console.WriteLine("=== Menú de Ventas ===");
             Console.WriteLine("1. Agregar venta");
             Console.WriteLine("2. Listar ventas");
-            Console.WriteLine("3. Sacar total de una venta en especifico");
-            Console.WriteLine("4. Eliminar venta");
+            Console.WriteLine("3. Sacar total de una venta en especifico: ");
+            Console.WriteLine("4. Sacar las ventas de un dia en especifico: ");
+            Console.WriteLine("5. Vendedor del mes: ");
             Console.WriteLine("0. Salir");
             Console.Write("Seleccione una opción: ");
 
@@ -62,12 +63,24 @@ public class Menu
 
                 case "3":
                     Console.Clear();
-                    Console.WriteLine("--seleccione la venta que quiere calcular ---");
+                    Console.WriteLine("--- seleccione la venta que quiere calcular ---");
                     ventasService.Mostrar();
                     Console.Write("Seleccione un indice: ");
                     int index = int.Parse(Console.ReadLine() ?? "0");
                     ventasService.calcularTotal(index);
                     break;
+                case "4":
+                    Console.Clear();
+                    Console.WriteLine("--- ingrese la fecha del dia que desea calcular sus ventas ---");
+                    Console.Write("(yyyy-mm-dd): ");
+                    DateTime fechaComparar = DateTime.Parse(Console.ReadLine() ?? "");
+                    ventasService.CalcularPromedioVentas(fechaComparar);
+                    break;
+                case "5":
+                    Console.Clear();
+                    Console.WriteLine("--- el vendedor del mes es: ---");
+                    ventasService.VendedorQueMasSeRepite();
+                break;
                 case "0":
                     continuar = false;
                     break;
